@@ -20,7 +20,7 @@ struct LoginView: View {
                 Form {
                     if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
-                            .foregroundColor(Color.red)
+                            .foregroundColor(Color.blue)
                     }
                     
                     TextField("email", text: $viewModel.email)
@@ -32,7 +32,7 @@ struct LoginView: View {
                         .font(.custom("AmericanTypewriter", size: 12))
                         .textFieldStyle(DefaultTextFieldStyle())
                     TLButton(title: "log in",
-                             background: .blue) {
+                             background: .red) {
                         viewModel.login()
                     }
                 }
